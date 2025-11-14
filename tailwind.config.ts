@@ -57,6 +57,13 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        "light-form": "hsl(var(--light-form))",
+        "light-glow": "hsl(var(--light-glow))",
+        "shadow-form": "hsl(var(--shadow-form))",
+        "shadow-glow": "hsl(var(--shadow-glow))",
+        "game-background": "hsl(var(--game-background))",
+        "obstacle-light": "hsl(var(--obstacle-light))",
+        "obstacle-shadow": "hsl(var(--obstacle-shadow))",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -80,10 +87,39 @@ export default {
             height: "0",
           },
         },
+        "pulse-glow": {
+          "0%, 100%": {
+            opacity: "1",
+            transform: "scale(1)",
+          },
+          "50%": {
+            opacity: "0.8",
+            transform: "scale(1.05)",
+          },
+        },
+        "slide-left": {
+          from: {
+            transform: "translateX(100vw)",
+          },
+          to: {
+            transform: "translateX(-100px)",
+          },
+        },
+        "float": {
+          "0%, 100%": {
+            transform: "translateY(0px)",
+          },
+          "50%": {
+            transform: "translateY(-10px)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+        "slide-left": "slide-left 3s linear infinite",
+        "float": "float 3s ease-in-out infinite",
       },
     },
   },
